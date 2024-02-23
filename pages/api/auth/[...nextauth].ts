@@ -15,5 +15,5 @@ const options = {
     }),
   ],
   adapter: PrismaAdapter(prisma),
-  secret: process.env.SECRET,
+  secret: require('crypto').randomBytes(32).toString('hex'),
 };
